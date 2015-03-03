@@ -26,7 +26,7 @@
     @include transition(opacity $hover-effect-milo-speed, transform $hover-effect-milo-speed);
     @include translate3d(-40px, 0, 0);
 
-    border-right: 1px solid #fff;
+    border-right: 1px solid $hover-effect-milo-border-color;
     opacity: 0;
     padding: 0 10px 0 0;
     text-align: right;

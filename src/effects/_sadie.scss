@@ -49,7 +49,7 @@
     h2 {
       @include transform(translate3d(0, -50%, 0) translate3d(0, -40px, 0));
 
-      color: #fff;
+      color: $hover-effect-sadie-hover-color;
     }
 
     figcaption::before,

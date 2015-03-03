@@ -1,13 +1,12 @@
 // ===
 // Zoe
 // ===
-
 .hover-effect figure.effect-zoe {
   figcaption {
     @include transition(transform $hover-effect-zoe-speed);
     @include translate3d(0, 100%, 0);
 
-    background: #fff;
+    background: $hover-effect-zoe-border-color;
     bottom: 0;
     color: $hover-effect-zoe-color;
     height: 3.75em;
@@ -32,8 +31,6 @@
 
     span::before {
       display: inline-block;
-      // TODO remove feathericons dependency
-      font-family: 'feathericons';
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
       padding: 8px 10px;
@@ -46,7 +43,7 @@
     @include backface-visibility(hidden); /* Fix for Chrome 37.0.2062.120 (Mac) */
 
     bottom: 8em;
-    color: #fff;
+    color: $hover-effect-zoe-border-color;
     font-size: 90%;
     opacity: 0;
     padding: 2em;

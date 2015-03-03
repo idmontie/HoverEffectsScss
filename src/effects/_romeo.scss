@@ -14,7 +14,7 @@
     @include transition(opacity $hover-effect-romeo-speed, transform $hover-effect-romeo-speed);
     @include translate3d(-50%, -50%, 0);
 
-    background: #fff;
+    background: $hover-effect-romeo-border-color;
     content: '';
     height: 1px;
     left: 50%;

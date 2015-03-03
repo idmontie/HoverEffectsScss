@@ -1,6 +1,7 @@
 
 $hover-effect-background-color:                #528cb3 !default;
 $hover-effect-caption-color:                   #fff !default;
+$hover-effect-border-color:                    #fff !default;
 $hover-effect-default-speed:                   .35s !default;
 $hover-effect-default-delay:                   .2s !default;
 $hover-effect-default-short-delay:             .05s !default;
@@ -8,22 +9,27 @@ $hover-effect-default-short-delay:             .05s !default;
 // Bubba
 $hover-effect-bubba-speed:                     $hover-effect-default-speed !default;
 $hover-effect-bubba-background:                $hover-effect-background-color !default;
+$hover-effect-bubba-border-color:              $hover-effect-border-color !default;
 
 // Chico
 $hover-effect-chico-speed:                     $hover-effect-default-speed !default;
+$hover-effect-chico-border-color:              $hover-effect-border-color !default;
 
 // Dexter
 $hover-effect-dexter-speed:                    $hover-effect-default-speed !default;
 $hover-effect-dexter-background-color:         $hover-effect-background-color !default;
+$hover-effect-dexter-border-color:             $hover-effect-border-color !default; 
 
 // Honey
 $hover-effect-honey-speed:                     $hover-effect-default-speed !default;
-$hover-effect-honey-background-color:          $hover-effect-background-color;
+$hover-effect-honey-background-color:          $hover-effect-background-color !default;
+$hover-color-honey-border-color:               $hover-effect-border-color !default;
 
 // Layla
 $hover-effect-layla-speed:                     $hover-effect-default-speed !default;
 $hover-effect-layla-delay:                     .15s !default;
 $hover-effect-layla-background-color:          $hover-effect-background-color !default;
+$hover-effect-layla-border-color:              $hover-effect-border-color !default;
 
 // Lily
 $hover-effect-lily-speed:                      $hover-effect-default-speed !default;
@@ -32,37 +38,46 @@ $hover-effect-lily-hover-delay:                $hover-effect-default-short-delay
 
 // Marley
 $hover-effect-marley-speed:                    $hover-effect-default-speed !default;
+$hover-effect-marley-border-color:             $hover-effect-border-color !default;
 
 // Milo
 $hover-effect-milo-speed:                      $hover-effect-default-speed !default;
 $hover-effect-milo-background-color:           $hover-effect-background-color !default;
+$hover-effect-milo-border-color:               $hover-effect-border-color !default;
 
 // Oscar
 $hover-effect-oscar-speed:                     $hover-effect-default-speed !default;
 $hover-effect-oscar-figcaption-background-rgb: $hover-effect-background-color !default;
 $hover-effect-oscar-background-color:          $hover-effect-background-color !default;
+$hover-effect-oscar-border-color:              $hover-effect-border-color !default;
 
 // Romeo
 $hover-effect-romeo-speed:                     $hover-effect-default-speed !default;
+$hover-effect-romeo-border-color:              $hover-effect-border-color !default;
 
 // Roxy
 $hover-effect-roxy-speed:                      $hover-effect-default-speed !default;
 $hover-effect-roxy-background-color:           $hover-effect-background-color !default;
+$hover-effect-roxy-border-color:               $hover-effect-border-color !default;
 
 // Ruby
 $hover-effect-ruby-speed:                      $hover-effect-default-speed !default;
 $hover-effect-ruby-background-color:           $hover-effect-background-color !default;
+$hover-effect-ruby-border-color:               $hover-effect-border-color !default;
 
 // Sadie
 $hover-effect-sadie-speed:                     $hover-effect-default-speed !default;
 $hover-effect-sadie-color:                     $hover-effect-background-color !default;
+$hover-effect-sadie-hover-color:               #fff !default;
 
 // Sarah
 $hover-effect-sarah-speed:                     $hover-effect-default-speed !default;
 $hover-effect-sarah-background-color:          $hover-effect-background-color !default;
+$hover-effect-sarah-border-color:              $hover-effect-border-color !default;
 
 // Zoe
 $hover-effect-zoe-speed:                       $hover-effect-default-speed !default;
 $hover-effect-zoe-delay:                       $hover-effect-default-short-delay !default;
 $hover-effect-zoe-color:                       $hover-effect-background-color !default;
 $hover-effect-zoe-color-dark:                  $hover-effect-background-color !default;
+$hover-effect-zoe-border-color:                $hover-effect-border-color !default;

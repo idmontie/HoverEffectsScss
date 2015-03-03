@@ -18,7 +18,7 @@
     padding: 3em;
 
     &::before {
-      border: 1px solid #fff;
+      border: 1px solid $hover-effect-oscar-border-color;
       bottom: 30px;
       content: '';
       left: 30px;

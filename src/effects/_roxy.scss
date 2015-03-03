@@ -22,7 +22,7 @@
       @include transition(opacity $hover-effect-roxy-speed, transform $hover-effect-roxy-speed);
       @include translate3d(-20px, 0, 0);
 
-      border: 1px solid #fff;
+      border: 1px solid $hover-effect-roxy-border-color;
       bottom: 30px;
       content: '';
       left: 30px;

@@ -13,7 +13,7 @@
     &::before {
       @include scale(1.1);
       
-      border: 1px solid #fff;
+      border: 1px solid $hover-effect-chico-border-color;
       bottom: 30px;
       content: '';
       left: 30px;

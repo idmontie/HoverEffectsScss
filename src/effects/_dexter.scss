@@ -18,7 +18,7 @@
       @include transition(transform $hover-effect-dexter-speed);
       @include translate3d(0, -100%, 0);
 
-      border: 7px solid #fff;
+      border: 7px solid $hover-effect-dexter-border-color;
       bottom: 30px;
       content: '';
       height: -webkit-calc(50% - 30px);

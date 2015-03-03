@@ -30,7 +30,7 @@
     &::after {
       @include translate3d(0, 40px, 0);
 
-      background: #fff;
+      background: $hover-effect-marley-border-color;
       content: '';
       height: 4px;
       left: 0;

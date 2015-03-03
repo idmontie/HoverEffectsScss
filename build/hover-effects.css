@@ -996,7 +996,6 @@
 }
 .hover-effect figure.effect-zoe p.icon-links a span::before {
   display: inline-block;
-  font-family: 'feathericons';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   padding: 8px 10px;
