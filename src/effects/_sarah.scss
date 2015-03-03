@@ -2,7 +2,7 @@
 // Sarah
 // =====
 .hover-effect figure.effect-sarah {
-  // background: #42b078;
+  background: $hover-effect-sarah-background-color;
   
   img {
     @include backface-visibility(hidden);

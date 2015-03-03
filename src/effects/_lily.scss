@@ -7,7 +7,7 @@
     @include transition(opacity $hover-effect-lily-speed, transform $hover-effect-lily-speed);
 
     max-width: none;
-    opacity: 0.7;   
+    opacity: .7;   
     width: -webkit-calc(100% + 50px);
     width: calc(100% + 50px);
   }

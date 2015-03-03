@@ -1,63 +1,62 @@
-/*---------------*/
-/***** Honey *****/
-/*---------------*/
+// =====
+// Honey
+// =====
+.hover-effect figure.effect-honey {
+  background: $hover-effect-honey-background-color;
+ 
+  img {
+    @include transition(opacity $hover-effect-honey-speed);
 
-figure.effect-honey {
-  background: #4a3753;
-}
+    opacity: .9;
+  }
 
-figure.effect-honey img {
-  opacity: 0.9;
-  -webkit-transition: opacity 0.35s;
-  transition: opacity 0.35s;
-}
+  figcaption::before {
+    @include translate3d(0, 10px, 0);
 
-figure.effect-honey:hover img {
-  opacity: 0.5;
-}
+    background: #fff;
+    bottom: 0;
+    content: '';
+    height: 10px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
 
-figure.effect-honey figcaption::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: #fff;
-  content: '';
-  -webkit-transform: translate3d(0,10px,0);
-  transform: translate3d(0,10px,0);
-}
+  h2 {
+    @include translate3d(0, -30px, 0);
+    bottom: 0;
+    left: 0;
+    padding: 1em 1.5em;
+    position: absolute;
+    text-align: left;
+    width: 100%;
 
-figure.effect-honey h2 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 1em 1.5em;
-  width: 100%;
-  text-align: left;
-  -webkit-transform: translate3d(0,-30px,0);
-  transform: translate3d(0,-30px,0);
-}
+    i {
+      @include transition(opacity $hover-effect-honey-speed, transform $hover-effect-honey-speed);
+      @include translate3d(0, -30px, 0);
 
-figure.effect-honey h2 i {
-  font-style: normal;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0,-30px,0);
-  transform: translate3d(0,-30px,0);
-}
+      font-style: normal;
+      opacity: 0;
+    }
+  }
 
-figure.effect-honey figcaption::before,
-figure.effect-honey h2 {
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-}
+  figcaption::before,
+  h2 {
+    @include transition(transform $hover-effect-honey-speed);
+  }
 
-figure.effect-honey:hover figcaption::before,
-figure.effect-honey:hover h2,
-figure.effect-honey:hover h2 i {
-  opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  &:hover {
+    img {
+      opacity: .5;
+    }
+
+    figcaption::before,
+    h2,
+    h2 i {
+      @include translate3d(0, 0, 0);
+
+      opacity: 1;
+    }
+
+  }
 }

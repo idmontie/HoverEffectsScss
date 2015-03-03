@@ -1,62 +1,62 @@
-/*---------------*/
-/***** Marley *****/
-/*---------------*/
+// ======
+// Marley
+// ======
+.hover-effect figure.effect-marley {
+  figcaption {
+    text-align: right;
+  }
 
-figure.effect-marley figcaption {
-  text-align: right;
-}
+  h2,
+  p {
+    left: 30px;
+    padding: 10px 0;
+    position: absolute;
+    right: 30px;
+  }
 
-figure.effect-marley h2,
-figure.effect-marley p {
-  position: absolute;
-  right: 30px;
-  left: 30px;
-  padding: 10px 0;
-}
+  p {
+    @include translate3d(0, 100%, 0);
 
+    bottom: 30px;
+    line-height: 1.5;
+  }
 
-figure.effect-marley p {
-  bottom: 30px;
-  line-height: 1.5;
-  -webkit-transform: translate3d(0,100%,0);
-  transform: translate3d(0,100%,0);
-}
+  h2 {
+    @include transition(transform $hover-effect-marley-speed);
+    @include translate3d(0, 20px, 0);
 
-figure.effect-marley h2 {
-  top: 30px;
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  -webkit-transform: translate3d(0,20px,0);
-  transform: translate3d(0,20px,0);
-}
+    top: 30px;
 
-figure.effect-marley:hover h2 {
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
+    &::after {
+      @include translate3d(0, 40px, 0);
 
-figure.effect-marley h2::after {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #fff;
-  content: '';
-  -webkit-transform: translate3d(0,40px,0);
-  transform: translate3d(0,40px,0);
-}
+      background: #fff;
+      content: '';
+      height: 4px;
+      left: 0;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+    }
+  }
 
-figure.effect-marley h2::after,
-figure.effect-marley p {
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
+  h2::after,
+  p {
+    @include transition(opacity $hover-effect-marley-speed, transform $hover-effect-marley-speed);
 
-figure.effect-marley:hover h2::after,
-figure.effect-marley:hover p {
-  opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+    opacity: 0;
+  }
+
+  &:hover {
+    h2 {
+      @include translate3d(0, 0, 0);
+    }
+
+    h2::after,
+    p {
+      @include translate3d(0, 0, 0);
+
+      opacity: 1;
+    }
+  }
 }

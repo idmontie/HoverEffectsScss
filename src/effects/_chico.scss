@@ -1,57 +1,57 @@
-/*---------------*/
-/***** Chico *****/
-/*---------------*/
+// =====
+// Chico
+// =====
+.hover-effect figure.effect-chico {
+  img {
+    @include transition(opacity $hover-effect-chico-speed, transform $hover-effect-chico-speed);
+    @include scale(1.12);
+  }
 
-figure.effect-chico img {
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale(1.12);
-  transform: scale(1.12);
-}
+  figcaption {
+    padding: 3em;
 
-figure.effect-chico:hover img {
-  opacity: 0.5;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+    &::before {
+      @include scale(1.1);
+      
+      border: 1px solid #fff;
+      bottom: 30px;
+      content: '';
+      left: 30px;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+  }
 
-figure.effect-chico figcaption {
-  padding: 3em;
-}
+  figcaption::before,
+  p {
+    @include transition(opacity $hover-effect-chico-speed, transform $hover-effect-chico-speed);
 
-figure.effect-chico figcaption::before {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
-  border: 1px solid #fff;
-  content: '';
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
+    opacity: 0;
+  }
 
-figure.effect-chico figcaption::before,
-figure.effect-chico p {
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
+  h2 {
+    padding: 20% 0 20px;
+  }
 
-figure.effect-chico h2 {
-  padding: 20% 0 20px 0;
-}
+  p {
+    @include scale(1.5);
+    margin: 0 auto;
+    max-width: 200px;
+  }
 
-figure.effect-chico p {
-  margin: 0 auto;
-  max-width: 200px;
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
+  &:hover {
+    img {
+      @include scale(1);
 
-figure.effect-chico:hover figcaption::before,
-figure.effect-chico:hover p {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+      opacity: .5;
+    }
+
+    figcaption::before,
+    p {
+      @include scale(1);
+
+      opacity: 1;
+    }
+  }
 }

@@ -2,10 +2,10 @@
 // Ruby
 // ====
 .hover-effect figure.effect-ruby {
-  // background-color: #17819c;
+  background-color: $hover-effect-ruby-background-color;
   
   img {
-    @include transtition(opacity $hover-effect-ruby-speed, transform $hoever-effect-ruby-speed);
+    @include transition(opacity $hover-effect-ruby-speed, transform $hover-effect-ruby-speed);
     @include scale(1.15);
 
     opacity: .7;

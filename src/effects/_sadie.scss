@@ -31,7 +31,7 @@
 
   figcaption::before,
   p {
-    @include transition(opacity $hover-effect-sadie-speed, transform, $hover-effect-sadie-speed);
+    @include transition(opacity $hover-effect-sadie-speed, transform $hover-effect-sadie-speed);
   }
 
   p {
@@ -47,11 +47,9 @@
 
   &:hover {
     h2 {
-      @include transform(translate3d(0, -50%, 0), translate3d(0, -40px, 0));
+      @include transform(translate3d(0, -50%, 0) translate3d(0, -40px, 0));
 
       color: #fff;
-      // -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-      // transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
     }
 
     figcaption::before,

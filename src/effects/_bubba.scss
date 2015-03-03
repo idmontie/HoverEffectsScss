@@ -1,21 +1,13 @@
 // =====
 // Bubba
 // =====
-$hover-effect-bubba-speed: .35s;
-
 .hover-effect figure.effect-bubba {
-  // background: #9e5406;
+  background: $hover-effect-bubba-background;
 
   img {
     @include transition(opacity $hover-effect-bubba-speed);
 
-    opacity: 0.7;    
-  }
-
-  &:hover {
-    img {
-      opacity: 0.4;
-    }
+    opacity: .7;    
   }
 
   figcaption {
@@ -35,46 +27,50 @@ $hover-effect-bubba-speed: .35s;
     &::before {
       @include scale(0, 1);
 
-      border-top: 1px solid #fff;
       border-bottom: 1px solid #fff;
+      border-top: 1px solid #fff;
     }
 
     &::after {
       @include scale(1, 0);
 
-      border-right: 1px solid #fff;
       border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
     }
   }
 
   h2 {
+    @include transition(transform $hover-effect-bubba-speed);
+    @include translate3d(0, -20px, 0);
+
     padding-top: 30%;
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    -webkit-transform: translate3d(0,-20px,0);
-    transform: translate3d(0,-20px,0);
   }
 
   p {
-    padding: 20px 2.5em;
+    @include transition(opacity $hover-effect-bubba-speed, transform $hover-effect-bubba-speed);
+    @include translate3d(0, 20px, 0);
+
     opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(0,20px,0);
-    transform: translate3d(0,20px,0);
+    padding: 20px 2.5em;
   }
 
+  &:hover {
+    img {
+      opacity: .4;
+    }
 
-figure.effect-bubba:hover figcaption::before,
-figure.effect-bubba:hover figcaption::after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+    figcaption::before,
+    figcaption::after {
+      @include scale(1);
 
-figure.effect-bubba:hover h2,
-figure.effect-bubba:hover p {
-  opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+      opacity: 1;
+    }
+
+    h2,
+    p {
+      @include translate3d(0, 0, 0);
+
+      opacity: 1;
+    }
+  }
 }

@@ -1,104 +1,96 @@
-/*---------------*/
-/***** Layla *****/
-/*---------------*/
+// =====
+// Layla
+// =====
+.hover-effect figure.effect-layla {
+  background: $hover-effect-layla-background-color;
+  
+  figcaption {
+    padding: 3em;
 
-figure.effect-layla {
-  background: #18a367;
-}
+    &::before,
+    &::after {
+      content: '';
+      opacity: 0;
+      position: absolute;
+    }
 
-figure.effect-layla img {
-  height: 390px;
-}
+    &::before {
+      @include scale(0, 1);
+      @include transform-origin(0 0);
 
-figure.effect-layla figcaption {
-  padding: 3em;
-}
+      border-bottom: 1px solid #fff;
+      border-top: 1px solid #fff;
+      bottom: 50px;
+      left: 30px;
+      right: 30px;
+      top: 50px;
+    }
 
-figure.effect-layla figcaption::before,
-figure.effect-layla figcaption::after {
-  position: absolute;
-  content: '';
-  opacity: 0;
-}
+    &::after {
+      @include scale(1, 0);
+      @include transform-origin(100%, 0);
 
-figure.effect-layla figcaption::before {
-  top: 50px;
-  right: 30px;
-  bottom: 50px;
-  left: 30px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: scale(0,1);
-  transform: scale(0,1);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+      bottom: 30px;
+      left: 50px;
+      right: 50px;
+      top: 30px;
+    }
+  }
 
-figure.effect-layla figcaption::after {
-  top: 30px;
-  right: 50px;
-  bottom: 30px;
-  left: 50px;
-  border-right: 1px solid #fff;
-  border-left: 1px solid #fff;
-  -webkit-transform: scale(1,0);
-  transform: scale(1,0);
-  -webkit-transform-origin: 100% 0;
-  transform-origin: 100% 0;
-}
+  h2 {
+    @include transition(transform $hover-effect-layla-speed);
 
-figure.effect-layla h2 {
-  padding-top: 26%;
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-}
+    padding-top: 26%;
+  }
 
-figure.effect-layla p {
-  padding: 0.5em 2em;
-  text-transform: none;
-  opacity: 0;
-  -webkit-transform: translate3d(0,-10px,0);
-  transform: translate3d(0,-10px,0);
-}
+  p {
+    @include translate3d(0, -10px, 0);
 
-figure.effect-layla img,
-figure.effect-layla h2 {
-  -webkit-transform: translate3d(0,-30px,0);
-  transform: translate3d(0,-30px,0);
-}
+    opacity: 0;
+    padding: .5em 2em;
+    text-transform: none;
+  }
 
-figure.effect-layla img,
-figure.effect-layla figcaption::before,
-figure.effect-layla figcaption::after,
-figure.effect-layla p {
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
+  img,
+  h2 {
+    @include translate3d(0, -30px, 0);
+  }
 
-figure.effect-layla:hover img {
-  opacity: 0.7;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
+  img,
+  figcaption::before,
+  figcaption::after,
+  p {
+    @include transition(opacity $hover-effect-layla-speed, transform $hover-effect-layla-speed);
+  }
 
-figure.effect-layla:hover figcaption::before,
-figure.effect-layla:hover figcaption::after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+  &:hover {
+    img {
+      @include translate3d(0, 0, 0);
 
-figure.effect-layla:hover h2,
-figure.effect-layla:hover p {
-  opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
+      opacity: .7;
+    }
 
-figure.effect-layla:hover figcaption::after,
-figure.effect-layla:hover h2,
-figure.effect-layla:hover p,
-figure.effect-layla:hover img {
-  -webkit-transition-delay: 0.15s;
-  transition-delay: 0.15s;
+    figcaption::before,
+    figcaption::after {
+      @include scale(1);
+
+      opacity: 1;
+    }
+
+    h2,
+    p {
+      @include translate3d(0, 0, 0);
+
+      opacity: 1;
+    }
+
+    figcaption::after,
+    h2,
+    p,
+    img {
+      @include transition-delay($hover-effect-layla-delay);
+    }
+  }
 }

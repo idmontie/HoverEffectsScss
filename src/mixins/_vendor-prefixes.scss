@@ -34,6 +34,14 @@
 
 // Transitions
 
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
 @mixin transition($values...) { 
   $transitions: ();
   @each $declaration in $values {
@@ -154,7 +162,7 @@
   perspective-origin: $perspective;
 }
 
-@mixin transform-origin($origin) {
+@mixin transform-origin($origin...) {
   -webkit-transform-origin: $origin;
   -moz-transform-origin: $origin;
   -ms-transform-origin: $origin; // IE9 only

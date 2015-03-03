@@ -24,7 +24,7 @@
       }
 
       &,
-      & > a {
+      > a {
         height: 100%;
         left: 0;
         position: absolute;
@@ -34,7 +34,7 @@
 
       /* Anchor will cover the whole item by default */
       /* For some effects it will show as a button */
-      & > a {
+      > a {
         font-size: 0;
         opacity: 0;
         text-indent: 200%;
@@ -45,7 +45,7 @@
 
     h2 {
       font-weight: 300;
-      word-spacing: -0.15em;
+      word-spacing: -.15em;
 
       span {
         font-weight: 800;

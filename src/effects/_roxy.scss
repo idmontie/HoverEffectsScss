@@ -2,8 +2,8 @@
 // Roxy
 // ====
 .hover-effect figure.effect-roxy {
-  // background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
-  // background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
+  background: -webkit-linear-gradient(45deg, $hover-effect-roxy-background-color 0%, darken($hover-effect-roxy-background-color, 80%) 100%);
+  background: linear-gradient(45deg, $hover-effect-roxy-background-color 0%, darken($hover-effect-roxy-background-color, 80%) 100%);
 
   img {
     @include transition(opacity $hover-effect-roxy-speed, transform $hover-effect-roxy-speed);
