@@ -9,6 +9,9 @@ linters:
   ColorKeyword:
     enabled: false
 
+  ColorVariable:
+    enabled: false;
+
   Comment:
     enabled: false
 
