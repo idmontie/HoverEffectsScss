@@ -1,0 +1,57 @@
+// =====
+// Moses
+// =====
+.hover-effect figure.effect-moses {
+  background: -webkit-linear-gradient(-45deg, $hover-effect-moses-background-color 0%, darken($hover-effect-moses-background-color, 80%) 100%);
+  background: linear-gradient(-45deg, $hover-effect-moses-background-color 0%, darken($hover-effect-moses-background-color, 80%) 100%);
+
+  img {
+    @include transition(opacity $hover-effect-moses-speed);
+
+    opacity: .85;
+  }
+
+  h2,
+  p {
+    border: 2px solid $hover-effect-moses-border-color;
+    height: 50%;
+    padding: 20px;
+    width: 50%;
+  }
+
+  h2 {
+    @include transition(transform $hover-effect-moses-speed);
+    @include translate3d(10px, 10px, 0);
+
+    height: 50%;
+    padding: 20px;
+    text-align: left;
+    width: 50%;
+  }
+
+  p {
+    @include transition(opacity $hover-effect-moses-speed, transform $hover-effect-moses-speed);
+    @include translate3d(-50%, -50%, 0);
+
+    float: right;
+    opacity: 0;
+    padding: 20px;
+    text-align: right;
+  }
+
+  &:hover {
+    h2 {
+      @include translate3d(0, 0, 0);
+    }
+
+    p {
+      @include translate3d(0, 0, 0);
+
+      opacity: 1;
+    }
+
+    img {
+      opacity: .6;
+    }
+  }
+}
