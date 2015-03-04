@@ -5,6 +5,8 @@ Hover Effects SaSS
 
 Hover effects based off of the demos available on [Tympanus](http://tympanus.net/Development/HoverEffectIdeas/).
 
+![Julia Hover Effect](/images/preview.png "Julia Hover Effect")
+
 # Usage
 
 In order to use the hover effects, you will need to include the styles using one of the following methods:
