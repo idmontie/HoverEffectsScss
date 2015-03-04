@@ -86,3 +86,16 @@ Certain effects will require special markup in the `<p>` tag for the complete "e
 # Demo
 
 If you clone the repo, a demo is available: `demo/index.html`
+
+# Notes
+
+The colors from the original source were changed in this repo so that there is more of a hierarchy to the color variables.  This is especially useful when working
+with Sass since you can globally modify the colors used by setting the following variables:
+
+```scss
+$hover-effect-background-color
+$hover-effect-caption-color
+$hover-effect-border-color
+```
+
+You can also modify the colors for each individual effect.  Look at `src/_variables.scss` for a full list of all individual variables you can override.
