@@ -910,7 +910,7 @@
 
 .hover-effect figure.effect-lexi {
   background: -webkit-linear-gradient(-45deg, black 0%, #528cb3 100%);
-  background: linear-gradient(-45deg, #000 0%, #528cb3 100%);
+  background: linear-gradient(-45deg, black 0%, #528cb3 100%);
 }
 .hover-effect figure.effect-lexi img {
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -2056,7 +2056,7 @@
   -moz-transform-origin: 0 100%;
   -ms-transform-origin: 0 100%;
   transform-origin: 0 100%;
-  border-bottom: 300px solid white;
+  border-bottom: 300px solid #fff;
   border-left: 425px solid transparent;
   content: '';
   height: 100%;
@@ -2089,12 +2089,12 @@
   opacity: 0;
 }
 .hover-effect figure.effect-winston a {
-  color: #5d504f;
+  color: #528cb3;
   font-size: 170%;
   margin: 0 10px;
 }
 .hover-effect figure.effect-winston a:hover, .hover-effect figure.effect-winston a:focus {
-  color: #cc6055;
+  color: #111f28;
 }
 .hover-effect figure.effect-winston:hover img {
   opacity: .6;

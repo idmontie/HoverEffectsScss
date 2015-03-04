@@ -15,7 +15,7 @@
     @include rotate3d(0, 0, 1, 45deg);
     @include transform-origin(0 100%);
 
-    border-bottom: 300px solid white;
+    border-bottom: 300px solid $hover-effect-winston-border-color;
     border-left: 425px solid transparent;
     content: '';    
     height: 100%;
@@ -45,13 +45,13 @@
   }
 
   a {
-    color: #5d504f;
+    color: $hover-effect-winston-font-color;
     font-size: 170%;
     margin: 0 10px;
 
     &:hover,
     &:focus {
-      color: #cc6055;
+      color: darken($hover-effect-winston-font-color, 40%);
     }
   }
 
