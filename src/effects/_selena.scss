@@ -1,0 +1,42 @@
+// ======
+// Selena
+// ======
+.hover-effect figure.effect-selena {
+  background: $hover-effect-selena-background-color;
+
+  img {
+    @include transition(transform $hover-effect-selena-speed);
+    @include transform-origin(50% 50%);
+
+    opacity: .95;
+  }
+
+  h2 {
+    @include transition(transform $hover-effect-selena-speed);
+    @include translate3d(0, 20px, 0);
+  }
+
+  p {
+    @include transition(opacity $hover-effect-selena-speed, transform $hover-effect-selena-speed);
+    @include transform(perspective(1000px) rotate3d(1, 0, 0, 90deg));
+    @include transform-origin(50% 0%);
+
+    opacity: 0;
+  }
+
+  &:hover {
+    img {
+      @include scale3d(.95, .95, 1);
+    }
+
+    h2 {
+      @include translate3d(0, 0, 0);
+    }
+
+    p {
+      @include transform(perspective(1000px) rotate3d(1, 0, 0, 0));
+
+      opacity: 1;
+    }
+  }
+}

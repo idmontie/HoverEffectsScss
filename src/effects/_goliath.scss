@@ -1,0 +1,48 @@
+// =======
+// Goliath
+// =======
+.hover-effect figure.effect-goliath {
+  background: $hover-effect-goliath-background-color;
+
+  img,
+  h2 {
+    @include transition(transform $hover-effect-goliath-speed);
+  }
+
+  img {
+    @include backface-visibility(hidden);
+  }
+
+  h2,
+  p {
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+  }
+
+  p {
+    @include transition(opacity $hover-effect-goliath-speed, transform $hover-effect-goliath-speed);
+    @include translate3d(0, 50px, 0);
+
+    font-size: 90%;
+    opacity: 0;
+    text-transform: none;
+  }
+
+  &:hover {
+    img {
+      @include translate3d(0, -80px, 0);
+    }
+
+    h2 {
+      @include translate3d(0, -100px, 0);
+    }
+
+    p {
+      @include translate3d(0, 0, 0);
+
+      opacity: 1;
+    }
+  }
+}

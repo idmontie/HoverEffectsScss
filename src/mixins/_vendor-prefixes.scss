@@ -96,6 +96,13 @@
   transform: scale($ratio);
 }
 
+@mixin scale3d($ratio...) {
+  -webkit-transform: scale3d($ratio);
+  -ms-transform: scale3d($ratio); // IE9 only
+  -o-transform: scale3d($ratio);
+  transform: scale3d($ratio);
+}
+
 @mixin scaleX($ratio) {
   -webkit-transform: scaleX($ratio);
   -ms-transform: scaleX($ratio); // IE9 only
@@ -134,6 +141,13 @@
   -ms-transform: rotate($degrees); // IE9 only
   -o-transform: rotate($degrees);
   transform: rotate($degrees);
+}
+
+@mixin rotate3d($degrees...) {
+  -webkit-transform: rotate3d($degrees);
+  -ms-transform: rotate3d($degrees); // IE9 only
+  -o-transform: rotate3d($degrees);
+  transform: rotate3d($degrees);
 }
 
 @mixin rotateX($degrees) {

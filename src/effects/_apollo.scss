@@ -1,0 +1,62 @@
+// ======
+// Apollo
+// ======
+.hover-effect figure.effect-apollo {
+  background: $hover-effect-apollo-background-color;
+
+  img {
+    @include transition(opacity $hover-effect-apollo-speed, transform $hover-effect-apollo-speed);
+    @include scale3d(1.05, 1.05, 1);
+
+    opacity: .95;
+  }
+
+  figcaption::before {
+    @include transition(transform $hover-effect-apollo-slow-speed);
+    @include transform(scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -110%, 0));
+    
+    background: rgba($hover-effect-apollo-background-color, .5);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  p {
+    @include transition(opacity $hover-effect-apollo-speed);
+    
+    border-right: 4px solid $hover-effect-apollo-border-color;
+    bottom: 0;
+    margin: 3em;
+    max-width: 150px;
+    opacity: 0;
+    padding: 0 1em;
+    position: absolute;
+    right: 0;
+    text-align: right;    
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  &:hover {
+    img {
+      @include scale3d(1, 1, 1);
+
+      opacity: .6;
+    }
+
+    figcaption::before {
+      @include transform(scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 110%, 0));
+    }
+
+    p {
+      @include transition-delay($hover-effect-apollo-delay);
+
+      opacity: 1;
+    }
+  }
+}

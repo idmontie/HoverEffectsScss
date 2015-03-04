@@ -6,6 +6,13 @@ $hover-effect-default-speed:                   .35s !default;
 $hover-effect-default-delay:                   .2s !default;
 $hover-effect-default-short-delay:             .05s !default;
 
+// Apollo
+$hover-effect-apollo-background-color:         $hover-effect-background-color !default;
+$hover-effect-apollo-border-color:             $hover-effect-border-color !default;
+$hover-effect-apollo-speed:                    $hover-effect-default-speed !default;
+$hover-effect-apollo-slow-speed:               .6s !default;
+$hover-effect-apollo-delay:                    $hover-effect-default-delay / 2 !default;
+
 // Bubba
 $hover-effect-bubba-speed:                     $hover-effect-default-speed !default;
 $hover-effect-bubba-background:                $hover-effect-background-color !default;
@@ -20,10 +27,28 @@ $hover-effect-dexter-speed:                    $hover-effect-default-speed !defa
 $hover-effect-dexter-background-color:         $hover-effect-background-color !default;
 $hover-effect-dexter-border-color:             $hover-effect-border-color !default; 
 
+// Goliath
+$hover-effect-goliath-speed:                   $hover-effect-default-speed !default;
+$hover-effect-goliath-background-color:        $hover-effect-background-color !default;
+
+// Hera
+$hover-effect-hera-speed:                      $hover-effect-default-speed !default;
+$hover-effect-hera-background-color:           $hover-effect-background-color !default;
+$hover-effect-hera-border-color:               $hover-effect-border-color !default;
+$hover-effect-hero-font-color:                 $hover-effect-caption-color !default;
+
 // Honey
 $hover-effect-honey-speed:                     $hover-effect-default-speed !default;
 $hover-effect-honey-background-color:          $hover-effect-background-color !default;
 $hover-color-honey-border-color:               $hover-effect-border-color !default;
+
+// Julia
+$hover-effect-julia-delay:                     $hover-effect-default-short-delay !default;
+$hover-effect-julia-speed:                     $hover-effect-default-speed !default;
+$hover-effect-julia-slow-speed:                1s !default;
+$hover-effect-julia-background-color:          $hover-effect-background-color !default;
+$hover-effect-julia-border-color:              rgb(255, 255, 255) !default;
+$hover-effect-julia-color:                     #2f3238 !default;
 
 // Layla
 $hover-effect-layla-speed:                     $hover-effect-default-speed !default;
@@ -51,6 +76,12 @@ $hover-effect-oscar-figcaption-background-rgb: $hover-effect-background-color !d
 $hover-effect-oscar-background-color:          $hover-effect-background-color !default;
 $hover-effect-oscar-border-color:              $hover-effect-border-color !default;
 
+// Phoebe
+$hover-effect-phoebe-speed:                    $hover-effect-default-speed !default;
+$hover-effect-phoebe-background-color:         $hover-effect-background-color !default;
+$hover-effect-phoebe-font-color:               $hover-effect-caption-color !default;
+$hover-effect-phoebe-border-color:             $hover-effect-border-color !default;
+
 // Romeo
 $hover-effect-romeo-speed:                     $hover-effect-default-speed !default;
 $hover-effect-romeo-border-color:              $hover-effect-border-color !default;
@@ -68,12 +99,29 @@ $hover-effect-ruby-border-color:               $hover-effect-border-color !defau
 // Sadie
 $hover-effect-sadie-speed:                     $hover-effect-default-speed !default;
 $hover-effect-sadie-color:                     $hover-effect-background-color !default;
-$hover-effect-sadie-hover-color:               #fff !default;
+$hover-effect-sadie-hover-color:               $hover-effect-caption-color !default;
 
 // Sarah
 $hover-effect-sarah-speed:                     $hover-effect-default-speed !default;
 $hover-effect-sarah-background-color:          $hover-effect-background-color !default;
 $hover-effect-sarah-border-color:              $hover-effect-border-color !default;
+
+// Selena
+$hover-effect-selena-speed:                    $hover-effect-default-speed !default;
+$hover-effect-selena-background-color:         $hover-effect-background-color !default;
+
+// Terry
+$hover-effect-terry-speed:                     $hover-effect-default-speed !default;
+$hover-effect-terry-delay:                     $hover-effect-default-short-delay !default;
+$hover-effect-terry-background-color:          $hover-effect-background-color !default;
+$hover-effect-terry-font-color:                $hover-effect-background-color !default;
+$hover-effect-terry-border-color:              $hover-effect-border-color !default;
+
+// Winston
+$hover-effect-winston-delay:                   $hover-effect-default-short-delay !default;
+$hover-effect-winston-speed:                   .45s !default;
+$hover-effect-winston-slow-speed:              $hover-effect-default-speed !default;
+$hover-effect-winston-background-color:        $hover-effect-background-color !default;
 
 // Zoe
 $hover-effect-zoe-speed:                       $hover-effect-default-speed !default;

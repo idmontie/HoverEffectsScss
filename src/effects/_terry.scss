@@ -1,0 +1,121 @@
+// =====
+// Terry
+// =====
+.hover-effect figure.effect-terry {
+  background: $hover-effect-terry-background-color;
+
+  figcaption {
+    padding: 1em;
+
+    &::before,
+    &::after {
+      @include transition(transform $hover-effect-terry-speed);
+      
+      border-color: $hover-effect-terry-border-color;
+      border-style: solid;
+      content: '';
+      height: 200%;
+      position: absolute;
+      width: 200%;
+    }
+
+    &::before {
+      @include translate3d(70px, 60px, 0);
+
+      border-width: 0 70px 60px 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &::after {
+      @include translate3d(-15px, -15px, 0);
+
+      border-width: 15px 0 0 15px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  img,
+  p a {
+    @include transition(opacity $hover-effect-terry-speed, transform $hover-effect-terry-speed);
+  }
+
+  img {
+    opacity: .85;
+  }
+
+  h2 {
+    @include transition(transform $hover-effect-terry-speed, color $hover-effect-terry-speed);
+    @include translate3d(100%, 0, 0);
+
+    bottom: 0;
+    left: 0;
+    padding: .4em 10px;
+    position: absolute;
+    width: 50%;
+
+    @media screen and (max-width: 920px) {
+      font-size: 120%;
+      padding: .75em 10px;
+    }
+  }
+
+  p {
+    clear: both;
+    float: right;
+    font-size: 111%;
+    text-align: left;
+    text-transform: none;
+    
+    a {
+      @include translate3d(90px, 0, 0);
+
+      display: block;
+      margin-bottom: 1em;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    figcaption::before,
+    figcaption::after {
+      @include translate3d(0, 0, 0);
+    }
+
+    img {
+      opacity: .6;
+    }
+
+    h2 {
+      color: $hover-effect-terry-font-color;
+    }
+
+    h2,
+    p a {
+      @include translate3d(0, 0, 0);
+    }
+
+    p a {
+      opacity: 1;
+    }
+
+    a {
+      &:first-child {
+        @include transition-delay($hover-effect-terry-delay / 2);
+      }
+
+      &:nth-child(2) {
+        @include transition-delay($hover-effect-terry-delay);
+      }
+
+      &:nth-child(3) {
+        @include transition-delay($hover-effect-terry-delay * 3 / 2);
+      }
+
+      &:nth-child(4) {
+        @include transition-delay($hover-effect-terry-delay * 2);
+      }
+    }
+  }
+}
