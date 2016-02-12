@@ -1,11 +1,11 @@
 Hover Effects SaSS
 ==================
 
-[![Build Status](https://travis-ci.org/idmontie/hover-effects-scss.svg)](https://travis-ci.org/idmontie/hover-effects-scss)
+[![Build Status](https://travis-ci.org/idmontie/HoverEffectsScss.svg)](https://travis-ci.org/idmontie/HoverEffectsScss)
 
 Hover effects based off of the demos available on [Tympanus](http://tympanus.net/Development/HoverEffectIdeas/).
 
-[Preview](https://idmontie.github.io/hover-effects-scss)
+[Preview](https://idmontie.github.io/HoverEffectsScss)
 
 ![Julia Hover Effect](/images/preview.png "Julia Hover Effect")
 
